@@ -1,0 +1,29 @@
+log_dir: stdout
+log_level: debug
+
+# Send statistics to graphite
+stats:
+  enable: true
+  graphite_host: "vm-graphite"
+  graphite_port: 2003
+  graphite_prefix: DevOps
+
+http:
+  enable: true
+  address: ":8080"
+  # List replicas of elasticsearch cluster
+  elasticsearch:
+    - "http://vm-elastic:9200"
+  # Sampling can be used to limit part of incoming traces. 
+  # Value of N means that only one of N traces will be written to elastic.
+  sampling: 1
+  replicas:
+    - "http://localhost:8080"
+  # Number of seconds to wait if trace is completed before write it to elastic,
+  min_ttl: 10
+  # Number of seconds to wait if trace is not completed before it will be cleaned out.
+  max_ttl: 120
+
+profiling:
+  # https://golang.org/pkg/net/http/pprof/
+  enable: true

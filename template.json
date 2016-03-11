@@ -1,0 +1,114 @@
+{
+  "order": 0,
+  "template": "traces-*",
+  "settings": {
+    "index": {
+      "refresh_interval": "10s"
+    }
+  },
+  "mappings": {
+    "trace": {
+      "properties": {
+        "duration": {
+          "type": "integer",
+          "doc_values": true
+        },
+        "spans": {
+          "type": "nested",
+          "properties": {
+            "td": {
+              "type": "integer",
+              "doc_values": true
+            },
+            "rc": {
+              "type": "integer",
+              "doc_values": true
+            },
+            "cd": {
+              "type": "integer",
+              "doc_values": true
+            },
+            "sd": {
+              "type": "integer",
+              "doc_values": true
+            },
+            "host": {
+              "index": "not_analyzed",
+              "type": "string",
+              "doc_values": true
+            },
+            "timeline": {
+              "properties": {
+                "cs": {
+                  "index": "no",
+                  "type": "date",
+                  "doc_values": true
+                },
+                "ss": {
+                  "index": "no",
+                  "type": "date",
+                  "doc_values": true
+                },
+                "cr": {
+                  "index": "no",
+                  "type": "date",
+                  "doc_values": true
+                },
+                "sr": {
+                  "index": "no",
+                  "type": "date",
+                  "doc_values": true
+                }
+              }
+            },
+            "rqbl": {
+              "type": "long",
+              "doc_values": true
+            },
+            "url": {
+              "index": "not_analyzed",
+              "type": "string",
+              "doc_values": true
+            },
+            "rsbl": {
+              "type": "long",
+              "doc_values": true
+            }
+          }
+        },
+        "chains": {
+          "type": "nested",
+          "properties": {
+            "duration": {
+              "type": "long",
+              "doc_values": true
+            },
+            "level": {
+              "type": "integer",
+              "doc_values": true
+            }
+          }
+        },
+        "timestamp": {
+          "type": "date",
+          "doc_values": true
+        }
+      }
+    },
+    "_default_": {
+      "dynamic_templates": [
+        {
+          "default_fields": {
+            "mapping": {
+              "ignore_above": 10922,
+              "index": "not_analyzed",
+              "doc_values": true
+            },
+            "match": "*"
+          }
+        }
+      ]
+    }
+  },
+  "aliases": {}
+}
