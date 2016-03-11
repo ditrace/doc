@@ -9,4 +9,4 @@ DiTrace was originally developed and is supported by SKB Kontur (https://kontur.
 - Ilya Loktionov iloktionov@skbkontur.ru
 
 # Contributers
-- Ivan Lyzhin
+- Ivan Lyzhin https://github.com/LyzhinIvan
