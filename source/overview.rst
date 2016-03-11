@@ -38,7 +38,7 @@ DiTrace gate are responsible for:
 2. Saving traces to elasticsearch
 
 Elasticsearch has a various stats aggregations for data analysis.
-UI is an visualization tool for those aggregations and data.
+UI is an visualization tool for this aggregations and data.
 
 .. image:: _static/ui.png
    :alt: UI
