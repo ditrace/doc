@@ -3,7 +3,7 @@ DiTrace gate API
 
 Gate accept only the following http request.
 
-.. http:post:: /spans/(string:system)
+.. http:post:: /spans?system=(string)
 
    System parameters is used if no system annotation in span json
 
@@ -52,6 +52,7 @@ Gate accept only the following http request.
 
       HTTP/1.1 200 OK
 
+   :query system: spans source system name
    :statuscode 200: no error
    :statuscode 400: server can't parse request content or any of required field is missing (system, traceid, spanid)
 
