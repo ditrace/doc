@@ -71,7 +71,7 @@ Run
 
    curl -XPUT http://elasticsearch:9200/_template/traces --data-binary @template.json
    
-:download: <template.json>
+:download:`template.json<../../template.json>`
        
 4. Run ditrace gate
 
