@@ -10,6 +10,7 @@ Contents
    overview
    installation/index
    api
+   integration
    contacts
 
 .. include:: overview.rst
