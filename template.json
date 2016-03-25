@@ -10,26 +10,26 @@
     "trace": {
       "properties": {
         "duration": {
-          "type": "integer",
+          "type": "long",
           "doc_values": true
         },
         "spans": {
           "type": "nested",
           "properties": {
             "td": {
-              "type": "integer",
+              "type": "long",
               "doc_values": true
             },
             "rc": {
-              "type": "integer",
+              "type": "long",
               "doc_values": true
             },
             "cd": {
-              "type": "integer",
+              "type": "long",
               "doc_values": true
             },
             "sd": {
-              "type": "integer",
+              "type": "long",
               "doc_values": true
             },
             "host": {
