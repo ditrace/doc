@@ -79,14 +79,17 @@ UI counts on following annotations
 
 - (required) **url** string (/path) 	 
 - (optional) **url_method** string (POST, GET, DELETE, etc)
-- (required) **host**	hostname string
-- (required) **targetId**	string (microservice unique name)
-- (optional) **rc**	int	(response code)
+- (required) **host** string (hostname of target host, taken from URL)
+- (required) **targetId** string (target service unique name)
+- (optional) **targetHost** string (human-readable name of target host, overrides **host** annotation)
+- (optional) **srcId** string (source service unique name)
+- (optional) **srcHost** string (human-readable name of source host)
+- (optional) **rc** int (response code)
 - (optional) **rqbl** long (request body length)
 - (optional) **rsbl** long (response body length)
-- (optional) **wrapper**	empty string (marks span as a wrapper of child spans to override targetid)
-- (optional) **root**	empty string (marks span as a root span) 
-- (optional) **revision**	int	(revision number to overwrite old annotations value)
+- (optional) **wrapper** empty string (marks span as a wrapper of child spans to override targetid)
+- (optional) **root** empty string (marks span as a root span) 
+- (optional) **revision** int (revision number to overwrite old annotations value)
 
 Timeline annotations
 ^^^^^^^^^^^^^^^^^^^^
