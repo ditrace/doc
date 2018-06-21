@@ -1,3 +1,7 @@
+# DEPRECATED
+
+# THIS REPOSITORY MAY BE REMOVED WITHOUT FURTHER NOTICE AFTER 31 AUG 2018
+
 # Documentation
 
 [![Documentation Status](https://readthedocs.org/projects/ditrace/badge/?version=latest)](http://ditrace.readthedocs.org/en/latest/?badge=latest) [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/ditrace/ditrace?utm_source=badge&utm_medium=badge&utm_campaign=badge)
